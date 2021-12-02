@@ -23,6 +23,8 @@ import lombok.NoArgsConstructor;
 @Entity
 public class AppUser implements UserDetails {
 
+	private static final long serialVersionUID = 1L;
+	
 	@SequenceGenerator(
 			name = "student_sequence",
 			sequenceName = "student_sequence",
@@ -84,7 +86,7 @@ public class AppUser implements UserDetails {
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return enabled;
+		return !enabled;
 	}
 
 	public AppUser(String firstName, String lastName, String email, String password, AppUserRole appUserRole) {
