@@ -46,7 +46,7 @@ public class RegistrationService {
                 request.getEmail(),
                 buildEmail(request.getFirstName(), link));
 
-        return token;
+        return "Account created, verify your e-mail to activate account";
     }
 
     @Transactional

@@ -86,7 +86,7 @@ public class AppUser implements UserDetails {
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return !enabled;
+		return enabled;
 	}
 
 	public AppUser(String firstName, String lastName, String email, String password, AppUserRole appUserRole) {
