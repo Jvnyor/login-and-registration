@@ -2,9 +2,9 @@
 
 ```
 {
-    "firstName": "Amigos",
-    "lastName": "Code",
-    "email": "hellow@amigoscode.com",
+    "firstName": "Firstname",
+    "lastName": "Lastname",
+    "email": "email@mail.com",
     "password": "password"
 }
 ```
