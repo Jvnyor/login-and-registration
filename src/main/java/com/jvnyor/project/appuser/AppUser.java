@@ -24,17 +24,10 @@ import lombok.NoArgsConstructor;
 public class AppUser implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
-	
-	@SequenceGenerator(
-			name = "student_sequence",
-			sequenceName = "student_sequence",
-			allocationSize = 1
-	)
+
+	@SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
 	@Id
-	@GeneratedValue(
-			strategy = GenerationType.SEQUENCE,
-			generator = "student_sequence"
-	)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
 	private Long id;
 	private String firstName;
 	private String lastName;
@@ -44,12 +37,11 @@ public class AppUser implements UserDetails {
 	private AppUserRole appUserRole;
 	private Boolean locked = false;
 	private Boolean enabled = false;
-	
+
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
-		SimpleGrantedAuthority authority = 
-				new SimpleGrantedAuthority(appUserRole.name());
+		SimpleGrantedAuthority authority = new SimpleGrantedAuthority(appUserRole.name());
 		return Collections.singletonList(authority);
 	}
 
@@ -97,6 +89,4 @@ public class AppUser implements UserDetails {
 		this.appUserRole = appUserRole;
 	}
 
-	
-	
 }

@@ -1,5 +1,5 @@
 package com.jvnyor.project.email;
 
 public interface EmailSender {
-    void send(String to, String email);
+	void send(String to, String email);
 }
